@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int x;
+   printf ("ktory syn?\n");
+   scanf ("%d",&x);
+
+    if (x==1||x==2)
+    {
+        printf("slyna z madrosci\n");
+    }
+    else if(x==3)
+    {
+        printf("widzimy sie na madrosci");
+    }
+    else printf("nie ma takiego syna\n");
+    return 0;
+}
