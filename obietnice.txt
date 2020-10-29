@@ -1,0 +1,47 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main()
+{
+
+
+    srand((unsigned int)time(NULL));
+    int f=rand()%10;
+
+
+    switch (f)
+    {
+    case  1:
+        printf("kielbasa");
+        break;
+    case 2:
+        printf("browary");
+        break;
+    case  3:
+        printf("towary");
+        break;
+    case 4:
+        printf("opieka lekarska");
+        break;
+    case 5:
+        printf("wysoka renta");
+        break;
+    case  6:
+        printf("kokosy");
+        break;
+    case 7:
+        printf("banany");
+        break;
+    case  8:
+        printf("taniec");
+        break;
+    case  9:
+        printf("co tylko chcesz");
+        break;
+    case  0:
+        printf("spiew");
+        break;
+    }
+    return 0;
+}
