@@ -5,6 +5,7 @@
 #include <time.h>
 
 
+
 #define K 40
 #define W 60
 
@@ -116,7 +117,8 @@ void wypiszPoleGry()
     printf("Punkty: %d      Rekord: %d",punkty,rekord);
     printf("\n");
 
-     for(i=0;i<K;i++){              //boczne ramki
+     for(i=0;i<K;i++)   //boczne ramki
+    {
         printf("%c",186);
 
         for(j=0;j<W;j++){
@@ -295,6 +297,11 @@ void schowajkursor()
 
 void main()
 {
+    printf("        SNAKE\n");
+    printf("Poruszaj sie uzywajac W A S D");
+    printf("\n Nie ugryz sie w ogon!\n");
+    system("pause");
+    system("Cls");
     Sleep(2000);
     narodzinyWeza();
 
@@ -306,7 +313,6 @@ void main()
         spawnkulek();
         ruch();
         ogon();
-        Sleep(50);
     }
 }
 
