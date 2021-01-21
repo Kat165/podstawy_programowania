@@ -99,7 +99,7 @@ void koniecGry()
 void wypiszPoleGry()
 {
     for(i=0;i<=W+1;i++)
-    {        //górna ramka
+    {        //gÃ³rna ramka
         if(i==0)
         {
             printf("%c",201);
@@ -284,6 +284,14 @@ void ogon()
     ++Tail;
 }
 
+void schowajkursor()
+{
+   HANDLE consoleHandle = GetStdHandle(STD_OUTPUT_HANDLE);
+   CONSOLE_CURSOR_INFO inf;
+   inf.dwSize = 100;
+   inf.bVisible = FALSE;
+   SetConsoleCursorInfo(consoleHandle, &inf);
+}
 
 void main()
 {
@@ -292,6 +300,7 @@ void main()
 
     while(gra==1)       //petla programu
     {
+        schowajkursor();
         wypiszPoleGry();
         zebyNieWygladaloDziwnie();
         spawnkulek();
